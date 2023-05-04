@@ -139,15 +139,21 @@ In the KDC machine we run the following command to generate the keytab file in t
 
 ![kadm5 keytab list](https://user-images.githubusercontent.com/113895553/236082819-53215ef4-f3ee-4a08-a8f8-4e81ecae4a20.PNG)
 
+Now we add a new principal on the KDC machine that we call for example "host"
 
 ![radnkey](https://user-images.githubusercontent.com/113895553/236084402-60c41017-62ec-4e92-b029-b9996ed05e42.PNG)
 
-
+And then we add a new user 'utilisateur' on KDC machine. 
+Of course the system asks us to add him a password responding to the minimum of exigence
 
 ![adduser utilisateur](https://user-images.githubusercontent.com/113895553/236084993-0baa350a-cad3-492f-b72d-67e667ff79f9.PNG)
 
+The ticket for our user is already created. Let's try to access 'ssh' service. \
+The first time to connect, ths system asks us to provide the password
 
 ![acces service ssh avec kdc centrale  tn](https://user-images.githubusercontent.com/113895553/236085087-08ba636c-3bf8-4b3a-a7fa-bcddd931b1d5.PNG)
+
+But next, our user is already authenticaed and we acces ssh without providing any password from the client machine
 
 ![kinit et klist](https://user-images.githubusercontent.com/113895553/236085146-54e9acab-d93b-4264-a808-0c769f81c0b7.PNG)
 
